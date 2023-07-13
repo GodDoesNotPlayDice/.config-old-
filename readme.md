@@ -35,7 +35,7 @@ yay -S ttf-jetbrains-mono-nerd dracula-gtk-theme-git dracula-icons-git swappy
 # Copy and replace files in .config
 cd ~/Downloads/
 sudo git clone https://github.com/GodDoesNotPlayDice/.config ~/
-cp -r ~/.config/.config/* ~/.config/
+cp -r ~/Downloads/.config/* ~/.config/
 
 
 ```
