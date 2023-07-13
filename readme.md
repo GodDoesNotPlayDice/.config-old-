@@ -21,30 +21,9 @@ sudo pacman -S firefox octopi neofetch discord
 sudo pacman -R firedragon
 
 # Install packages with pacman
-# Git: Distributed version control system
-# Curl: Tool for transferring data using various protocols
 # Squashfs-tools: Tools for working with SquashFS file systems
-sudo pacman -S git curl squashfs-tools
+sudo pacman -S squashfs-tools
 
-# Clone snapd from AUR and compile
-# Snapd: Universal package manager for Linux distributions
-git clone https://aur.archlinux.org/snapd.git
-cd snapd
-sudo chown -R user:user snapd/ # Rember change you user.
-makepkg -si
-
-# Enable and configure snapd
-sudo systemctl enable --now snapd.socket
-sudo ln -s /var/lib/snapd/snap /snap
-sudo snap refresh
-
-# Install snap applications
-# Code: Microsoft's source code editor
-# GitKraken: Graphical interface for Git
-# Postman: Platform for testing and developing APIs
-sudo snap install code --classic
-sudo snap install gitkraken --classic
-sudo snap install postman
 
 # Install packages with yay
 # ttf-jetbrains-mono-nerd: JetBrains' monospaced font
@@ -58,17 +37,51 @@ cd ~/Downloads/
 sudo git clone https://github.com/GodDoesNotPlayDice/.config ~/
 cp -r ~/.config/.config/* ~/.config/
 
-# Install additional applications
-# We use octopi instead of yay for the following applications
-# GitHub CLI: Command-line interface for GitHub
-# GitHub Desktop: Graphical interface for GitHub
-# Ulauncher: Fast and lightweight application launcher
-# Google Chrome: Google's web browser
-octopi -S github-cli github-desktop
-octopi -S ulauncher
-octopi -S google-chrome
 
 ```
+
+
+### After you can install some apps from snap
+use the next bash
+```bash
+# Clone snapd from AUR and compile
+# Snapd: Universal package manager for Linux distributions
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+sudo chown -R user:user snapd/ # Rember change you user.
+makepkg -si
+
+# Enable and configure snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+
+# Install snap applications
+# Code: Microsoft's source code editor
+# GitKraken: Graphical interface for Git
+# Postman: Platform for testing and developing APIs
+sudo snap install code --classic
+sudo snap install gitkraken --classic
+sudo snap install postman
+
+```
+
+### Octopi install
+
+Install additional applications
+We use octopi instead of yay for the following applications
+GitHub CLI: Command-line interface for GitHub GitHub Desktop: Graphical interface for GitHub
+Ulauncher: Fast and lightweight application launcher
+Google Chrome: Google's web browser
+
+
+you have to install theses for Octopi
+
+1) github-cli
+2) github-desktop
+3) ulauncher
+4) google-chrome
+
+
 ### before execute you have to make chmod.
 ```bash
 chmod +x script.sh
