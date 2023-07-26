@@ -8,7 +8,7 @@
     "margin-right": 0,
     "modules-left": ["wlr/workspaces", "custom/playerctl", "custom/playerlabel"],
     "modules-center": ["cpu", "memory", "disk"],
-    "modules-right": ["tray", "custom/pacman", "network", "pulseaudio", "battery", "clock"],
+    "modules-right": ["tray", "keyboard-state",  "custom/pacman", "network", "pulseaudio", "battery", "clock"],
     // Modules configuration
 	"clock": {
 		"format": " {:%H:%M}",
@@ -17,6 +17,18 @@
         	"format-alt": " {:%d/%m}"
 	},
 	
+  "keyboard-state": {
+    "capslock": true,
+    "format": {
+        "capslock": "{icon}"                                                                                                                                                       
+    },
+    "format-icons": {
+        "locked": "LOCK",
+        "unlocked": ""
+    }
+  },
+
+
 
 	"wlr/workspaces": {
         "active-only": false,
