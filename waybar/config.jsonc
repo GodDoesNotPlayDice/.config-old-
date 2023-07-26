@@ -8,7 +8,7 @@
     "margin-right": 0,
     "modules-left": ["wlr/workspaces", "custom/playerctl", "custom/playerlabel"],
     "modules-center": ["cpu", "memory", "disk"],
-    "modules-right": ["tray", "network", "pulseaudio", "battery", "clock"],
+    "modules-right": ["tray", "custom/pacman", "network", "pulseaudio", "battery", "clock"],
     // Modules configuration
 	"clock": {
 		"format": " {:%H:%M}",
@@ -67,6 +67,14 @@
       },
     },
 
+  "custom/pacman": {
+      "format": " {}",
+      "interval": 7200,
+      "exec": "i=$(checkupdates); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'", 
+      "exec-if": "exit 0", 
+      "on-click": "alacritty -e update", 
+      "signal": 8
+  },
 	"battery": {
         "states": {
             "good": 95,

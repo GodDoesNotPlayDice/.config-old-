@@ -41,12 +41,13 @@ window#waybar {
 	border-radius: 16px;
 }
 
-#custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall, #custom-launcher {
+#custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall, #custom-launcher, #custom-pacman {
     margin-top: 5px;
     margin-bottom: 5px;
     background: #282828;
     padding: 6px;
 }
+
 
 #custom-date {
 	color: #D3869B;
@@ -113,12 +114,15 @@ window#waybar {
     padding: 0px 0px;
 }
 
-#network {
-    color: #f4d9e1;
+#custom-pacman{
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+
+
+#network {
+    color: #f4d9e1;
     padding-right: 10px;
-    padding-left: 10px;
 }
 
 #pulseaudio {
