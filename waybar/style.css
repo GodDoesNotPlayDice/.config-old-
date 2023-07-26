@@ -1,215 +1,243 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-
-/*
-Polar Night
-nord0  #2e3440
-nord1  #3b4252
-nord2  #434c5e
-nord3  #4c566a
-Snow Storm
-nord4  #d8dee9
-nord5  #e5e9f0
-nord6  #eceff4
-Frost
-nord7  #8fbcbb
-nord8  #88c0d0
-nord9  #81a1c1
-nord10 #5e81ac
-Aurora
-nord11 #bf616a
-nord12 #d08770
-nord13 #ebcb8b
-nord14 #a3be8c
-nord15 #b48ead
-*/
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
-
 * {
-    color: #eceff4;
-    border: 0;
-    border-radius: 0;
-    padding: 0 5;
-    font-family: "JetBrains Mono NL";
-    font-size: 13px;
-}
-
-.modules-left{
-    margin-top: 10px;
-}
-
-.modules-center{
-    margin-top: 10px;
-}
-
-.modules-right{
-    margin-top: 10px;
+    border: none;
+    border-radius: 0px;
+    /*font-family: VictorMono, Iosevka Nerd Font, Noto Sans CJK;*/
+    font-family: Iosevka, FontAwesome, Noto Sans CJK;
+    font-size: 14px;
+    font-style: normal;
+    min-height: 0;
 }
 
 window#waybar {
-    /* background-color: transparent; */
-    background-color: rgba(0, 0, 0, 0);
-    transition-property: background-color;
-    transition-duration: .5s;
+    background: rgba(0, 0, 0, 0);
+    /* border-bottom: 1px solid #000000; */
+    color: #f4d9e1
 }
 
-#workspaces{
-    background: rgba(21, 18, 27, 0.8);
-    border-radius: 20px 20px 20px 20px;
-    padding-right: 10px;
-    padding-left: 10px;
+#workspaces {
+	background: #282828;
+	margin: 5px 5px 5px 5px;
+  padding: 0px 5px 0px 5px;
+	border-radius: 16px;
+  border: solid 0px #f4d9e1;
+  font-weight: normal;
+  font-style: normal;
 }
-
 #workspaces button {
-    padding: 2px 0px;
-    margin: 0 5;
-    border-bottom: 2px;
-    color: #313244;
-    border-color: #45465f;
-    border-style: solid;
-    margin-bottom: 2px;
+    padding: 0px 5px;
+    border-radius: 16px;
+    color: #928374;
 }
 
 #workspaces button.active {
-    border-color: #a6adc8;
-}
-
-
-#workspaces button.focused {
-	color: #a6adc8;
-	background: #eba0ac;
-	border-radius: 10px;
-}
-
-#workspaces button.urgent {
-	color: #11111b;
-	background: #a6e3a1;
-	border-radius: 10px;
+    color: #f4d9e1;
+    background-color: transparent;
+    border-radius: 16px;
 }
 
 #workspaces button:hover {
-	background: #11111b;
-	color: #cdd6f4;
-	border-radius: 10px;
+	background-color: #E6B9C6;
+	color: black;
+	border-radius: 16px;
 }
 
-tooltip {
-	background: #1e1e2e;
-	border-radius: 10px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #11111b;
+#custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall, #custom-launcher {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: #282828;
+    padding: 6px;
 }
 
-#clock,
-#cpu,
-#memory,
-#network,
-#pulseaudio,
-#custom-pacman,
-#custom-network_traffic {
-    background: rgba(21, 18, 27, 0.8);
-    padding: 0 10;
+#custom-date {
+	color: #D3869B;
 }
 
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
-
-#window{
-    background: rgba(21, 18, 27, 0.8);
-    border-radius: 20px 20px 20px 20px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: 10px;
+#custom-power {
+	color: #24283b;
+	background-color: #db4b4b;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 5px 10px;
 }
 
-#window.empty{
-    background: transparent;   
+#tray {
+    background: #282828;
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    padding: 8px
+    /*border-right: solid 1px #282738;*/
 }
 
 #clock {
-    border-radius: 20px 20px 20px 20px;
+    color: #E6B9C6;
+    background-color: #282828;
+    border-radius: 0px 0px 0px 24px;
+    padding-left: 13px;
     padding-right: 15px;
-    padding-left: 15px;
-    color: #a3be8c;
+    margin-right: 0px;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    /*border-left: solid 1px #282738;*/
 }
 
-@keyframes blink {
-    to {
-        color: #4c566a;
-        background-color: #eceff4;
-    }
+#battery{
+    color: #9ece6a;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
-#cpu {
-    color: #8fbcbb;
+#battery.charging {
+    color: #9ece6a;
 }
 
-#memory {
-    color: #d3869b;
+#battery.warning:not(.charging) {
+    background-color: #f7768e;
+    color: #24283b;
+    border-radius: 5px 5px 5px 5px;
 }
 
-#network.disabled {
-    color: #bf616a;
+#backlight {
+    background-color: #24283b;
+    color: #db4b4b;
+    border-radius: 0px 0px 0px 0px;
+    margin: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px 0px;
 }
 
 #network {
-    color: #d08770;
-}
-
-#network.disconnected {
-    color: #bf616a;
+    color: #f4d9e1;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 #pulseaudio {
-    color: #b48ead;
+    color: #f4d9e1;
+    margin-left: 0px;
 }
 
 #pulseaudio.muted {
-    color: #3b4252;
+    /* background: transparent; */
+    color: #928374;
+    /* border-radius: 8px; */
+    margin-left: 0px;
 }
 
-#custom-network_traffic {
-    color: #d08770;
+#custom-launcher {
+    color: #e5809e;
+    background-color: #282828;
+    border-radius: 0px 24px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0 20px 0 13px;
+    /*border-right: solid 1px #282738;*/
+    font-size: 20px;
 }
 
-#custom-media {
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    color: black;;
-    border-radius: 20px;
+#custom-launcher button:hover {
+    background-color: #FB4934;
+    color: transparent;
+    border-radius: 8px;
+    margin-right: -5px;
+    margin-left: 10px;
+}
+
+#custom-playerctl {
+	background: #282828;
+	padding-left: 15px;
+  padding-right: 14px;
+	border-radius: 16px;
+  /*border-left: solid 1px #282738;*/
+  /*border-right: solid 1px #282738;*/
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+}
+
+#custom-playerlabel {
+    background: transparent;
     padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 10px;
-}
-
-#keyboard-state{
-    background: rgba(21, 18, 27, 0.8);
-    border-radius: 20px 0px 0px 20px;
     padding-right: 15px;
-    padding-left: 15px;
+    border-radius: 16px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-style: normal;
 }
 
-#tray{
-    background: rgba(21, 18, 27, 0.8);
-    border-radius: 0px 20px 20px 0px;
+#window {
+    background: #282828;
+    padding-left: 15px;
     padding-right: 15px;
-    padding-left: 15px;
+    border-radius: 16px;
+    /*border-left: solid 1px #282738;*/
+    /*border-right: solid 1px #282738;*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-style: normal;
 }
 
+#custom-wf-recorder {
+    padding: 0 20px;
+    color: #e5809e;
+    background-color: #1E1E2E;
+}
+
+#cpu {
+    background-color: #282828;
+    /*color: #FABD2D;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#memory {
+    background-color: #282828;
+    /*color: #83A598;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#disk {
+    background-color: #282828;
+    /*color: #8EC07C;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#custom-hyprpicker {
+    background-color: #282828;
+    /*color: #8EC07C;*/
+    border-radius: 16px;
+    margin: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 11px 0px 9px;
+    font-weight: bold;
+}
