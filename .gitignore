@@ -54,6 +54,8 @@
 /pavucontrol.ini/
 /user-dirs.dirs/
 /user-dirs.locale/
+/Google/
+
 
 # Archivos
 /user-dirs.lo
@@ -68,3 +70,4 @@ mimeapps.list
 garuda/garuda-settings-manager.conf
 JetBrains/
 VirtualBox/
+fish/functions/fish_prompt.1691509551.copy
