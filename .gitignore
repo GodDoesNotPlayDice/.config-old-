@@ -71,3 +71,8 @@ garuda/garuda-settings-manager.conf
 JetBrains/
 VirtualBox/
 fish/functions/fish_prompt.1691509551.copy
+kglobalshortcutsrc
+kactivitymanagerdrc
+*.conf
+*.README
+*.menu
