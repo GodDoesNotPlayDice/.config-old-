@@ -5,11 +5,9 @@ hello, everybody theses are my packages + dot files of garuda hyprland.
 you need to install garuda hyprland iso.
 https://iso.builds.garudalinux.org/iso/community/hyprland/
 
-### You have to create this bash.
+### You have to follow this commands.
 
 ``` bash
-#!/bin/bash
-
 # Install packages with pacman
 # Firefox: Web browser
 # Octopi: Graphical interface for managing Arch Linux packages
@@ -59,6 +57,7 @@ sudo ln -s /var/lib/snapd/snap /snap
 # Code: Microsoft's source code editor
 # GitKraken: Graphical interface for Git
 # Postman: Platform for testing and developing APIs
+
 sudo snap install code --classic
 sudo snap install gitkraken --classic
 sudo snap install postman
