@@ -6,7 +6,7 @@
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
-    "modules-left": ["wlr/workspaces", "custom/playerctl", "custom/playerlabel"],
+    "modules-left": ["wlr/workspaces", "custom/playerlabel"],
     "modules-center": ["cpu", "memory", "disk"],
     "modules-right": ["tray", "keyboard-state",  "custom/pacman", "network", "pulseaudio", "battery", "clock"],
     // Modules configuration
