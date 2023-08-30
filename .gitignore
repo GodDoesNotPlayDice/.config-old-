@@ -77,3 +77,11 @@ kactivitymanagerdrc
 *.README
 *.menu
 obs-studio/
+kdedefaults/
+eog/
+gtkrc
+gtkrc-2.0
+kdeglobals
+obsidian/
+plasma-localerc
+wpaperd/
