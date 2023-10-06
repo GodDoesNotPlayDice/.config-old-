@@ -6,7 +6,7 @@
   "margin-bottom": 0,
   "margin-left": 0,
   "margin-right": 0,
-  "modules-left": ["hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
+  "modules-left": ["hyprland/workspaces", "custom/playerlabel"],
   "modules-center": ["cpu", "memory", "disk"],
   "modules-right": ["tray", "keyboard-state",  "custom/pacman", "network", "pulseaudio", "battery", "clock"],
 "clock": {
