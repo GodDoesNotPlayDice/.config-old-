@@ -48,7 +48,10 @@ window#waybar {
     background: #282828;
     padding: 6px;
 }
-
+#pulseaudio{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
 
 #custom-date {
 	color: #D3869B;
